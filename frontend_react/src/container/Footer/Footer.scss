@@ -12,7 +12,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem 2rem 1rem;
+  margin: 1rem 2rem 0;
 
   .app__footer-card {
     min-width: 290px;
@@ -65,7 +65,7 @@
 .app__footer-form {
   width: 60%;
   flex-direction: column;
-  margin: 1rem 2rem;
+  margin: 0 2rem 0.5rem;
 
   div {
     width: 100%;
@@ -91,7 +91,7 @@
     }
 
     textarea {
-      height: 170px;
+      height: 100px;
     }
 
     &:hover {
@@ -119,20 +119,47 @@
   }
 }
 
-#contact {
-  .app__wrapper {
-    padding-bottom: 1rem;
+.app__footer-social {
+  @media screen and (max-width: 449px) {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
 
-    @media screen and (min-width: 450px) {
-      .copyright {
-        position: absolute;
-        margin-top: 30rem;
+    flex-direction: row;
+  
+    padding: 1rem;
+
+    a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--white-color);
+      margin: 0.25rem 1rem;
+      border: 1px solid var(--lightGray-color);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        width: 15px;
+        height: 15px;
+        color: var(--gray-color);
+      }
+
+      &:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+
+        svg {
+          color: var(--white-color);
+        }
       }
     }
   }
-
-  .app__social {
-    position: absolute;
-    margin-top: 35rem;
+  @media screen and (min-width: 450px) {
+    display: none;
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -53,6 +54,21 @@ const Footer = () => {
             +91 6387607285
           </a>
         </div>
+      </div>
+
+      <div className="app__footer-social">
+        <a
+          href="https://www.linkedin.com/in/ayush-kumar-864b33229/"
+          target="__blank"
+        >
+          <BsLinkedin />
+        </a>
+        <a href="https://github.com/ayushsaha1018" target="__blank">
+          <BsGithub />
+        </a>
+        <a href="https://www.instagram.com/ayush_saha18/" target="__blank">
+          <BsInstagram />
+        </a>
       </div>
 
       {!isFormSubmitted ? (
